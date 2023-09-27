@@ -30,6 +30,8 @@ function TablePaginationActions(props) {
   const handleNextButtonClick = () => onPageChange(null, page + 1);
 
   return (
+
+    // Table Navigation Logic
     <Box sx={{ flexShrink: 0, ml: 2.5 }}>
       <IconButton
         onClick={handleBackButtonClick}
@@ -77,6 +79,7 @@ function PokemonTable() {
       .then((data) => setPokemonData(data));
   }, []);
 
+  // calc of power
   const calculatePower = (pokemon) => {
     return (
       pokemon.hp +
@@ -150,7 +153,7 @@ function PokemonTable() {
           <TextField
             type="number"
             id="outlined-basic"
-            label="Power threshold"
+            // label="Power threshold"
             placeholder="Power threshold"
             variant="outlined"
             size="small"
