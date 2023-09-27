@@ -91,12 +91,15 @@ function PokemonTable() {
     );
   };
 
+    // Filter Pokemon based on search name and minimum power
   const filteredPokemon = pokemonData
     .filter((pokemon) =>
       pokemon.name.toLowerCase().includes(searchName.toLowerCase())
     )
     .filter((pokemon) => calculatePower(pokemon) >= minPower);
 
+
+    // Calculate min and max power within the current page
   const currentMinPower = Math.min(
     ...filteredPokemon
       .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
