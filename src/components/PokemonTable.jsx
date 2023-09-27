@@ -174,7 +174,7 @@ function PokemonTable() {
       </Paper>
 
       <Stack alignItems="end">
-        <TableContainer component={Paper} sx={{ boxShadow: 3 }}>
+        <TableContainer component={Paper} sx={{ boxShadow: 3 , marginTop: 3 }}>
           <Table>
             <TableHead style={{ backgroundColor: "#F9F9F9" }}>
               <TableRow style={{color: "red "}}>
